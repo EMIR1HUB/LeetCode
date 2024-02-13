@@ -16,7 +16,10 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception{
-    int[] nums = {3, 2, 3};
-    System.out.println(solutions.majorityElement(nums));
+    String[] words = {"abc", "po", "car","ada","racecar","cool"};
+    System.out.println(solutions.firstPalindrome(words));
+
+//    int[] nums = {3, 2, 3};
+//    System.out.println(solutions.majorityElement(nums));
   }
 }
