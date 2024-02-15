@@ -2,11 +2,23 @@ package com.suleimanov.leetcode.leetcode;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
 public class Solutions {
+
+  // day04 Largest Perimeter Triangle https://leetcode.com/problems/largest-perimeter-triangle/description/
+  public int largestPerimeter(int[] nums) {
+    Arrays.sort(nums);
+    for (int i = nums.length - 1; i >= 2; i--) {
+      if (nums[i - 2] + nums[i - 1] > nums[i]) {
+        return nums[i - 2] + nums[i - 1] + nums[i];
+      }
+    }
+    return 0;
+  }
 
   // day03 Two Sum  https://leetcode.com/problems/two-sum/description/?source=submission-noac
   public int[] twoSum(int[] nums, int target) {
