@@ -9,6 +9,20 @@ import java.util.Map;
 @Component
 public class Solutions {
 
+  // day05 Palindrome Number https://leetcode.com/problems/palindrome-number/description/
+  public boolean isPalindrome(int x) {
+    if (x < 0 || x % 10 == 0 && x!=0)
+      return false;
+    int reverse = 0;
+    int temp = x;
+    while (temp != 0) {
+      int remainder = temp % 10;
+      reverse = reverse * 10 + remainder;
+      temp /= 10;
+    }
+    return x == reverse;
+  }
+
   // day04 Largest Perimeter Triangle https://leetcode.com/problems/largest-perimeter-triangle/description/
   public int largestPerimeter(int[] nums) {
     Arrays.sort(nums);
