@@ -5,13 +5,34 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 @Component
 public class Solutions {
 
+  // day06 Valid Parentheses https://leetcode.com/problems/valid-parentheses/description/
+  public boolean isValid(String s) {
+    if (s.length() % 2 != 0)
+      return false;
+
+    Stack<Character> openBrackets = new Stack<Character>();
+    for (char c : s.toCharArray()) {
+      if (c == '(') {
+        openBrackets.push(')');
+      } else if (c == '[') {
+        openBrackets.push(']');
+      } else if (c == '{') {
+        openBrackets.push('}');
+      } else if (openBrackets.empty() || openBrackets.pop() != c) {
+        return false;
+      }
+    }
+    return openBrackets.empty();
+  }
+
   // day05 Palindrome Number https://leetcode.com/problems/palindrome-number/description/
   public boolean isPalindrome(int x) {
-    if (x < 0 || x % 10 == 0 && x!=0)
+    if (x < 0 || x % 10 == 0 && x != 0)
       return false;
     int reverse = 0;
     int temp = x;

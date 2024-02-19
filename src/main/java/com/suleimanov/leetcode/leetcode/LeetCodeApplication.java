@@ -20,7 +20,9 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    System.out.println(solutions.isPalindrome(121));
+    System.out.println(solutions.isValid("()[]{}"));
+
+//    System.out.println(solutions.isPalindrome(121));
 
 //    System.out.println(solutions.largestPerimeter(new int[]{1,2,1,10}));
 
