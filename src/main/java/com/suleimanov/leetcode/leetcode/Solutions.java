@@ -10,6 +10,17 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day07 Missing Number https://leetcode.com/problems/missing-number/description/
+  public int missingNumber(int[] nums) {
+    int n = nums.length;
+    int total = (n * (n + 1)) / 2;
+    int sum = 0;
+    for(int num : nums){
+      sum += num;
+    }
+    return total - sum;
+  }
+
   // day06 Valid Parentheses https://leetcode.com/problems/valid-parentheses/description/
   public boolean isValid(String s) {
     if (s.length() % 2 != 0)

@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.time.Duration;
+import java.time.Period;
 import java.util.Arrays;
 
 @SpringBootApplication
@@ -20,7 +22,9 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    System.out.println(solutions.isValid("()[]{}"));
+    System.out.println(solutions.missingNumber(new int[]{3, 0, 1}));
+
+//    System.out.println(solutions.isValid("()[]{}"));
 
 //    System.out.println(solutions.isPalindrome(121));
 
