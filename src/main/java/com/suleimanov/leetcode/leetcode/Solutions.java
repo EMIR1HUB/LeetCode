@@ -10,12 +10,48 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day08 Roman to Integer https://leetcode.com/problems/roman-to-integer/description/
+  public int romanToInt(String s) {
+    int sum = 0;
+    char[] romani = s.toCharArray();
+    for (int i = 0; i < romani.length; i++) {
+      if (romani[i] == 'I') {
+        if (i + 1 < romani.length && (romani[i + 1] == 'V' || romani[i + 1] == 'X')) {
+          sum -= 1;
+        } else {
+          sum += 1;
+        }
+      } else if (romani[i] == 'V') {
+        sum += 5;
+      } else if (romani[i] == 'X') {
+        if (i + 1 < romani.length && (romani[i + 1] == 'L' || romani[i + 1] == 'C')) {
+          sum -= 10;
+        } else {
+          sum += 10;
+        }
+      } else if (romani[i] == 'L') {
+        sum += 50;
+      } else if (romani[i] == 'C') {
+        if (i + 1 < romani.length && (romani[i + 1] == 'D' || romani[i + 1] == 'M')) {
+          sum -= 100;
+        } else {
+          sum += 100;
+        }
+      } else if (romani[i] == 'D') {
+        sum += 500;
+      } else if (romani[i] == 'M') {
+        sum += 1000;
+      }
+    }
+    return sum;
+  }
+
   // day07 Missing Number https://leetcode.com/problems/missing-number/description/
   public int missingNumber(int[] nums) {
     int n = nums.length;
     int total = (n * (n + 1)) / 2;
     int sum = 0;
-    for(int num : nums){
+    for (int num : nums) {
       sum += num;
     }
     return total - sum;

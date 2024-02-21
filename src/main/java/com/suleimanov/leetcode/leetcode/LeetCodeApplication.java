@@ -22,7 +22,9 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    System.out.println(solutions.missingNumber(new int[]{3, 0, 1}));
+    System.out.println(solutions.romanToInt("LVIII"));
+
+//    System.out.println(solutions.missingNumber(new int[]{3, 0, 1}));
 
 //    System.out.println(solutions.isValid("()[]{}"));
 
