@@ -1,4 +1,4 @@
-package com.suleimanov.leetcode.leetcode;
+package com.suleimanov.leetcode;
 
 import org.springframework.stereotype.Component;
 
@@ -9,6 +9,26 @@ import java.util.Stack;
 
 @Component
 public class Solutions {
+
+  // day09 Find the Town Judge https://leetcode.com/problems/find-the-town-judge/description/
+  public int findJudge(int n, int[][] trust) {
+    int[] degrees = new int[n + 1]; // Чтобы включить индекс, основанный на 0
+
+    // количество входящих и исходящих степеней для каждого человека
+    for (int[] relation : trust) {
+      degrees[relation[0]]--; // Out-degree
+      degrees[relation[1]]++; // In-degree
+    }
+
+    // Поиск городского судьи
+    for (int i = 1; i <= n; i++) {
+      if (degrees[i] == n - 1) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
 
   // day08 Roman to Integer https://leetcode.com/problems/roman-to-integer/description/
   public int romanToInt(String s) {

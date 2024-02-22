@@ -1,13 +1,9 @@
-package com.suleimanov.leetcode.leetcode;
+package com.suleimanov.leetcode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.time.Duration;
-import java.time.Period;
-import java.util.Arrays;
 
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
@@ -21,8 +17,9 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
+    System.out.println(solutions.findJudge(3, new int[][]{{1, 3}, {2, 3}}));
 
-    System.out.println(solutions.romanToInt("LVIII"));
+//    System.out.println(solutions.romanToInt("LVIII"));
 
 //    System.out.println(solutions.missingNumber(new int[]{3, 0, 1}));
 
