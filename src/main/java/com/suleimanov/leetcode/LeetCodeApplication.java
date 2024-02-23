@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
 
@@ -17,7 +19,9 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    System.out.println(solutions.findJudge(3, new int[][]{{1, 3}, {2, 3}}));
+    System.out.println(solutions.longestCommonPrefix(new String[]{"dog","racecar","car"}));
+
+//    System.out.println(solutions.findJudge(3, new int[][]{{1, 3}, {2, 3}}));
 
 //    System.out.println(solutions.romanToInt("LVIII"));
 

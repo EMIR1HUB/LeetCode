@@ -10,6 +10,22 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day10 Longest Common Prefix https://leetcode.com/problems/longest-common-prefix/description/
+  public String longestCommonPrefix(String[] strs) {
+    Arrays.sort(strs);
+    String sFirst = strs[0];
+    String sLast = strs[strs.length - 1];
+    int indx = 0;
+    while (indx < sFirst.length() && indx < sLast.length()) {
+      if (sFirst.charAt(indx) == sLast.charAt(indx)) {
+        indx++;
+      } else {
+        break;
+      }
+    }
+    return sFirst.substring(0, indx);
+  }
+
   // day09 Find the Town Judge https://leetcode.com/problems/find-the-town-judge/description/
   public int findJudge(int n, int[][] trust) {
     int[] degrees = new int[n + 1]; // Чтобы включить индекс, основанный на 0
