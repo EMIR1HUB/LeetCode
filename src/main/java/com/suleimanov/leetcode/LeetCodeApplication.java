@@ -19,7 +19,9 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    System.out.println(solutions.longestCommonPrefix(new String[]{"dog","racecar","car"}));
+    System.out.println(Arrays.toString(solutions.plusOne(new int[]{1, 9})));
+
+//    System.out.println(solutions.longestCommonPrefix(new String[]{"dog","racecar","car"}));
 
 //    System.out.println(solutions.findJudge(3, new int[][]{{1, 3}, {2, 3}}));
 

@@ -10,6 +10,21 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day11 Plus One https://leetcode.com/problems/plus-one/description/
+  public int[] plusOne(int[] digits) {
+    for (int i = digits.length - 1; i >= 0; i--) {
+      if (digits[i] < 9) {
+        digits[i]++;
+        return digits;
+      }
+      digits[i] = 0;
+    }
+
+    int result[] = new int[digits.length + 1];
+    result[0] = 1;
+    return result;
+  }
+
   // day10 Longest Common Prefix https://leetcode.com/problems/longest-common-prefix/description/
   public String longestCommonPrefix(String[] strs) {
     Arrays.sort(strs);
