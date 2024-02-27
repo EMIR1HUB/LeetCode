@@ -10,6 +10,14 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day12 Search Insert Position https://leetcode.com/problems/search-insert-position/description/
+  public int searchInsert(int[] nums, int target) {
+    for (int i = 0; i < nums.length; i++) {
+      if(nums[i] >= target) return i;
+    }
+    return nums.length;
+  }
+
   // day11 Plus One https://leetcode.com/problems/plus-one/description/
   public int[] plusOne(int[] digits) {
     for (int i = digits.length - 1; i >= 0; i--) {

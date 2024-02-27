@@ -19,7 +19,10 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    System.out.println(Arrays.toString(solutions.plusOne(new int[]{1, 9})));
+
+    System.out.println(solutions.searchInsert(new int[]{1,3,5,6}, 7));
+
+//    System.out.println(Arrays.toString(solutions.plusOne(new int[]{1, 9})));
 
 //    System.out.println(solutions.longestCommonPrefix(new String[]{"dog","racecar","car"}));
 
