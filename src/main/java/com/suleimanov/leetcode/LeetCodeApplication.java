@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
+import java.util.function.Predicate;
 
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
@@ -19,8 +20,9 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
+//    System.out.println(solutions.removeDuplicates(new int[]{1,1,2}));
 
-    System.out.println(solutions.searchInsert(new int[]{1,3,5,6}, 7));
+//    System.out.println(solutions.searchInsert(new int[]{1,3,5,6}, 7));
 
 //    System.out.println(Arrays.toString(solutions.plusOne(new int[]{1, 9})));
 

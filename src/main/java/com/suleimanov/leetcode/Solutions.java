@@ -10,10 +10,22 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day13 Remove Duplicates from Sorted Array https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+  public int removeDuplicates(int[] nums) {
+    int i = 0;
+    for (int j = 1; j < nums.length; j++) {
+      if (nums[i] != nums[j]) {
+        i++;
+        nums[i] = nums[j];
+      }
+    }
+    return i + 1;
+  }
+
   // day12 Search Insert Position https://leetcode.com/problems/search-insert-position/description/
   public int searchInsert(int[] nums, int target) {
     for (int i = 0; i < nums.length; i++) {
-      if(nums[i] >= target) return i;
+      if (nums[i] >= target) return i;
     }
     return nums.length;
   }
