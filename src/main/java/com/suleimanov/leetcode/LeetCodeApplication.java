@@ -20,6 +20,8 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
+    System.out.println(solutions.removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+
 //    System.out.println(solutions.removeDuplicates(new int[]{1,1,2}));
 
 //    System.out.println(solutions.searchInsert(new int[]{1,3,5,6}, 7));

@@ -10,6 +10,18 @@ import java.util.Stack;
 @Component
 public class Solutions {
 
+  // day14 Remove Element https://leetcode.com/problems/remove-element/description/
+  public int removeElement(int[] nums, int val) {
+    int i = 0;
+    for (int j = 0; j < nums.length; j++){
+      if(nums[j] != val){
+        nums[i] = nums[j];
+        i++;
+      }
+    }
+    return i;
+  }
+
   // day13 Remove Duplicates from Sorted Array https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
   public int removeDuplicates(int[] nums) {
     int i = 0;
