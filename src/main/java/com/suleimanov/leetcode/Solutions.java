@@ -2,19 +2,25 @@ package com.suleimanov.leetcode;
 
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 @Component
 public class Solutions {
 
+  // day15 Contains Duplicate https://leetcode.com/problems/contains-duplicate/description/
+  public boolean containsDuplicate(int[] nums) {
+    Set<Integer> visited = new HashSet<>();
+    for (Integer num : nums) {
+      if (!visited.add(num)) return true;
+    }
+    return false;
+  }
+
   // day14 Remove Element https://leetcode.com/problems/remove-element/description/
   public int removeElement(int[] nums, int val) {
     int i = 0;
-    for (int j = 0; j < nums.length; j++){
-      if(nums[j] != val){
+    for (int j = 0; j < nums.length; j++) {
+      if (nums[j] != val) {
         nums[i] = nums[j];
         i++;
       }
