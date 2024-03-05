@@ -7,13 +7,26 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  // day17 Sqrt(x) https://leetcode.com/problems/sqrtx/description/
+  public int mySqrt(int x) {
+    if(x <= 1) return x;
+    long i = 0, sq = 1;
+
+    while (true) {
+      if (i * i > x) {
+        return (int) i - 1;
+      }
+      i++;
+    }
+  }
+
 
   // day16 Reverse Linked List https://leetcode.com/problems/reverse-linked-list/description/
   public ListNode reverseList(ListNode head) {
     ListNode prev = null;
     ListNode current = head;
 
-    while (current != null){
+    while (current != null) {
       ListNode next = current.next;
       current.next = prev;
       prev = current;

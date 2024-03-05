@@ -5,6 +5,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.*;
+
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
 
@@ -17,9 +22,9 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    String s = "hi";
-    String s2 = s;
-    System.out.println(s == s2);
+
+
+//    System.out.println(solutions.mySqrt(2147395600));
 
 //    System.out.println(solutions.reverseList(solutions.new ListNode(1,
 //            solutions.new ListNode(2,
