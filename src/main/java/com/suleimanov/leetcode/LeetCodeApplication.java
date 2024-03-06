@@ -5,11 +5,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.function.*;
-
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
 
@@ -22,6 +17,14 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
+
+    System.out.println(solutions.mergeTwoLists(
+            solutions.new ListNode(1,
+                    solutions.new ListNode(2,
+                            solutions.new ListNode(4))),
+            solutions.new ListNode(1,
+                    solutions.new ListNode(3,
+                            solutions.new ListNode(4)))));
 
 
 //    System.out.println(solutions.mySqrt(2147395600));

@@ -7,9 +7,27 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day18 Merge Two Sorted Lists https://leetcode.com/problems/merge-two-sorted-lists/description/
+  public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    if (list1 != null && list2 != null){
+      if(list1.val < list2.val){
+        list1.next = mergeTwoLists(list1.next, list2);
+        return list1;
+      }
+      else {
+        list2.next=mergeTwoLists(list1, list2.next);
+        return list2;
+      }
+    }
+    if(list1==null){
+      return list2;
+    }
+    return list1;
+  }
+
   // day17 Sqrt(x) https://leetcode.com/problems/sqrtx/description/
   public int mySqrt(int x) {
-    if(x <= 1) return x;
+    if (x <= 1) return x;
     long i = 0, sq = 1;
 
     while (true) {
