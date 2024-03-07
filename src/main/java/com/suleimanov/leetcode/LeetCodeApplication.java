@@ -5,6 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.*;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
+
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
 
@@ -18,13 +22,28 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    System.out.println(solutions.mergeTwoLists(
-            solutions.new ListNode(1,
-                    solutions.new ListNode(2,
-                            solutions.new ListNode(4))),
-            solutions.new ListNode(1,
-                    solutions.new ListNode(3,
-                            solutions.new ListNode(4)))));
+    List<Integer> ls = new ArrayList<>();
+    List<Integer> ls1 = new ArrayList<>();
+    ls.add(1);
+    ls.add(1);
+    ls.add(3);
+    ls.add(4);
+    ls.add(2);
+
+    System.out.println(ls);
+    ls.remove((Integer) 2);
+    System.out.println(ls);
+
+//    System.out.println(solutions.strStr("sadbutsad", "sad"));
+
+
+//    System.out.println(solutions.mergeTwoLists(
+//            solutions.new ListNode(1,
+//                    solutions.new ListNode(2,
+//                            solutions.new ListNode(4))),
+//            solutions.new ListNode(1,
+//                    solutions.new ListNode(3,
+//                            solutions.new ListNode(4)))));
 
 
 //    System.out.println(solutions.mySqrt(2147395600));
