@@ -34,8 +34,9 @@ public class LeetCodeApplication implements CommandLineRunner {
     ls.remove((Integer) 2);
     System.out.println(ls);
 
-//    System.out.println(solutions.strStr("sadbutsad", "sad"));
+    System.out.println(solutions.lengthOfLastWord("Hello World"));
 
+//    System.out.println(solutions.strStr("sadbutsad", "sad"));
 
 //    System.out.println(solutions.mergeTwoLists(
 //            solutions.new ListNode(1,
