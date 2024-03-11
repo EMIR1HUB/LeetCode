@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
 import java.util.function.BiPredicate;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 @SpringBootApplication
@@ -22,19 +23,9 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    List<Integer> ls = new ArrayList<>();
-    List<Integer> ls1 = new ArrayList<>();
-    ls.add(1);
-    ls.add(1);
-    ls.add(3);
-    ls.add(4);
-    ls.add(2);
+    System.out.println(solutions.addBinary("11", "1"));
 
-    System.out.println(ls);
-    ls.remove((Integer) 2);
-    System.out.println(ls);
-
-    System.out.println(solutions.lengthOfLastWord("Hello World"));
+//    System.out.println(solutions.lengthOfLastWord("Hello World"));
 
 //    System.out.println(solutions.strStr("sadbutsad", "sad"));
 

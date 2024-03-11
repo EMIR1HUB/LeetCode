@@ -7,19 +7,40 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day21 Add binary https://leetcode.com/problems/add-binary/description/
+  public String addBinary(String a, String b) {
+    StringBuilder sb = new StringBuilder();
+    int i = a.length() - 1, j = b.length() - 1, carry = 0;
+    while (i >= 0 || j >= 0) {
+      int sum = carry;
+      if (j >= 0) {
+        sum += b.charAt(j--) - '0';
+      }
+      if (i >= 0) {
+        sum += a.charAt(i--) - '0';
+      }
+      sb.append(sum % 2);
+      carry = sum / 2;
+    }
+    if (carry != 0) {
+      sb.append(carry);
+    }
+    return sb.reverse().toString();
+  }
+
   //day20 Length of Last Word https://leetcode.com/problems/length-of-last-word/description/
   public int lengthOfLastWord(String s) {
     String[] str = s.split(" ");
-    return str[str.length-1].length();
+    return str[str.length - 1].length();
   }
 
   //day19 Find the Index of the First Occurrence in a String https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
   public int strStr(String haystack, String needle) {
-    if (haystack.length()<needle.length()){
+    if (haystack.length() < needle.length()) {
       return -1;
     }
-    for(int i=0 , j=needle.length() ; j<=haystack.length(); i++, j++ ){
-      if(haystack.substring(i,j).equals(needle)){
+    for (int i = 0, j = needle.length(); j <= haystack.length(); i++, j++) {
+      if (haystack.substring(i, j).equals(needle)) {
         return i;
       }
     }
@@ -28,17 +49,16 @@ public class Solutions {
 
   //day18 Merge Two Sorted Lists https://leetcode.com/problems/merge-two-sorted-lists/description/
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-    if (list1 != null && list2 != null){
-      if(list1.val < list2.val){
+    if (list1 != null && list2 != null) {
+      if (list1.val < list2.val) {
         list1.next = mergeTwoLists(list1.next, list2);
         return list1;
-      }
-      else {
-        list2.next=mergeTwoLists(list1, list2.next);
+      } else {
+        list2.next = mergeTwoLists(list1, list2.next);
         return list2;
       }
     }
-    if(list1==null){
+    if (list1 == null) {
       return list2;
     }
     return list1;
