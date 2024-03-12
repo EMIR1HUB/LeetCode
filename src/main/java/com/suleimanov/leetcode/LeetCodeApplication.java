@@ -23,7 +23,19 @@ public class LeetCodeApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    System.out.println(solutions.addBinary("11", "1"));
+    List<String> arrayList = new ArrayList<>();
+    arrayList.add("C");
+    arrayList.add("A");
+    arrayList.add("E");
+    arrayList.add("B");
+    arrayList.add("D");
+    arrayList.add("F");
+    arrayList.add("F");
+
+    System.out.println(solutions.climbStairs(4));
+
+
+//    System.out.println(solutions.addBinary("11", "1"));
 
 //    System.out.println(solutions.lengthOfLastWord("Hello World"));
 

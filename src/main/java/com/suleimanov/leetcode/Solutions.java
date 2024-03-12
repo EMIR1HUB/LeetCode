@@ -7,6 +7,22 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day22  Climbing Stairs https://leetcode.com/problems/climbing-stairs/description/
+  public int climbStairs(int n) {
+    if (n == 1 || n == 2)
+      return n;
+
+    int[] dp = new int[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    dp[2] = 2;
+
+    for (int i = 3; i <= n; i++) {
+      dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[n];
+  }
+
   //day21 Add binary https://leetcode.com/problems/add-binary/description/
   public String addBinary(String a, String b) {
     StringBuilder sb = new StringBuilder();
