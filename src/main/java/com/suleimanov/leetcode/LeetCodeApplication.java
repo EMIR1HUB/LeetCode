@@ -6,9 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
-import java.util.function.BiPredicate;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
@@ -19,6 +16,11 @@ public class LeetCodeApplication implements CommandLineRunner {
 
   @Autowired
   Solutions solutions;
+
+  public static List<String> reverse(List<String> list) {
+    Collections.reverse(list);
+    return list;
+  }
 
   @Override
   public void run(String... args) throws Exception {
@@ -32,8 +34,17 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
     arrayList.add("F");
 
-    System.out.println(solutions.climbStairs(4));
+    Map<Integer, String> map = new HashMap<>();
+    map.put(1, "sdsd");
+    map.put(2, "dsds");
+    map.put(4, "dsds");
 
+    Set<Map.Entry<Integer, String>> set = map.entrySet();
+    System.out.println(List.of(set));
+
+    System.out.println(solutions.pivotInteger(8));
+
+//    System.out.println(solutions.climbStairs(4));
 
 //    System.out.println(solutions.addBinary("11", "1"));
 
