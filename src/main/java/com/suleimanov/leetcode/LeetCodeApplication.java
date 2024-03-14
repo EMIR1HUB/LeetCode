@@ -34,15 +34,7 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
     arrayList.add("F");
 
-    Map<Integer, String> map = new HashMap<>();
-    map.put(1, "sdsd");
-    map.put(2, "dsds");
-    map.put(4, "dsds");
-
-    Set<Map.Entry<Integer, String>> set = map.entrySet();
-    System.out.println(List.of(set));
-
-    System.out.println(solutions.pivotInteger(8));
+//    System.out.println(solutions.isHappy(19));
 
 //    System.out.println(solutions.climbStairs(4));
 

@@ -7,6 +7,19 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  public boolean isHappy(int n) {
+    while (n != 1 && n != 4) {
+      int sum = 0;
+      while (n != 0) {
+        int a = n%10;
+        sum +=(a*a);
+        n /= 10;
+      }
+      n = sum;
+    }
+    return n == 1;
+  }
+
   //day23 Find the Pivot Integer https://leetcode.com/problems/find-the-pivot-integer/description/
   public int pivotInteger(int n) {
     int s1 = 0;
