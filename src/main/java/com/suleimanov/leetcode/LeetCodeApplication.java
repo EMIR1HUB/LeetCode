@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.*;
 import java.util.*;
 
 @SpringBootApplication
@@ -33,6 +34,11 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("D");
     arrayList.add("F");
     arrayList.add("F");
+
+
+
+
+//    System.out.println(Arrays.toString(solutions.findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"})));
 
 //    System.out.println(solutions.isHappy(19));
 

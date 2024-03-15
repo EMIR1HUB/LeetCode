@@ -7,6 +7,21 @@ import java.util.*;
 @Component
 public class Solutions {
 
+
+  //day25 Keyboard Row https://leetcode.com/problems/keyboard-row/description/
+  public String[] findWords(String[] words) {
+    List<String> newWords = new ArrayList<>();
+    for (String word : words){
+      if (word.toLowerCase().matches("[qwertyuiop]*")
+              || word.toLowerCase().matches("[asdfghjkl]*")
+              || word.toLowerCase().matches("[zxcvbnm]*")){
+        newWords.add(word);
+      }
+    }
+    return newWords.toArray(new String[0]);
+  }
+
+  //day24 Happy Number https://leetcode.com/problems/happy-number/description/
   public boolean isHappy(int n) {
     while (n != 1 && n != 4) {
       int sum = 0;
