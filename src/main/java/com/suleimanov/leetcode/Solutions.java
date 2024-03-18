@@ -7,14 +7,30 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day26 Remove Duplicates from Sorted List https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+  public ListNode deleteDuplicates(ListNode head) {
+    if (head == null || head.next == null) return head;
+    ListNode prev = head;
+    ListNode curr = head.next;
+    while (curr != null) {
+      if (curr.val == prev.val) {
+        curr = curr.next;
+        prev.next = curr;
+      } else {
+        prev = curr;
+        curr = curr.next;
+      }
+    }
+    return head;
+  }
 
   //day25 Keyboard Row https://leetcode.com/problems/keyboard-row/description/
   public String[] findWords(String[] words) {
     List<String> newWords = new ArrayList<>();
-    for (String word : words){
+    for (String word : words) {
       if (word.toLowerCase().matches("[qwertyuiop]*")
               || word.toLowerCase().matches("[asdfghjkl]*")
-              || word.toLowerCase().matches("[zxcvbnm]*")){
+              || word.toLowerCase().matches("[zxcvbnm]*")) {
         newWords.add(word);
       }
     }
@@ -26,8 +42,8 @@ public class Solutions {
     while (n != 1 && n != 4) {
       int sum = 0;
       while (n != 0) {
-        int a = n%10;
-        sum +=(a*a);
+        int a = n % 10;
+        sum += (a * a);
         n /= 10;
       }
       n = sum;

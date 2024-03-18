@@ -36,7 +36,12 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
 
 
-
+//    System.out.println(solutions.deleteDuplicates(
+//            solutions.new ListNode(1,
+//                    solutions.new ListNode(1,
+//                            solutions.new ListNode(2,
+//                                    solutions.new ListNode(3,
+//                                            solutions.new ListNode(3)))))));
 
 //    System.out.println(Arrays.toString(solutions.findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"})));
 
