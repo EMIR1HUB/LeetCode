@@ -5,8 +5,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
@@ -35,6 +36,7 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
     arrayList.add("F");
 
+//    System.out.println(solutions.isPalindrome("A man, a plan, a canal: Panama"));
 
 //    System.out.println(solutions.deleteDuplicates(
 //            solutions.new ListNode(1,

@@ -7,6 +7,19 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day27 Valid Palindrome https://leetcode.com/problems/valid-palindrome/description/
+  public boolean isPalindrome(String s) {
+    String inputStr = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+    StringBuilder sb = new StringBuilder(inputStr);
+    String ans = sb.reverse().toString();
+    for (int i = 0; i < inputStr.length(); i++) {
+      if (inputStr.charAt(i) != ans.charAt(i)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   //day26 Remove Duplicates from Sorted List https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
   public ListNode deleteDuplicates(ListNode head) {
     if (head == null || head.next == null) return head;
@@ -386,14 +399,14 @@ public class Solutions {
   // day02 Find First Palindromic String in the Array https://leetcode.com/problems/find-first-palindromic-string-in-the-array/description/
   public String firstPalindrome(String[] words) {
     for (String word : words) {
-      if (isPalindrome(word)) {
+      if (checkPalindrome(word)) {
         return word;
       }
     }
     return "";
   }
 
-  public boolean isPalindrome(String str) {
+  public boolean checkPalindrome(String str) {
     for (int i = 0; i < str.length() / 2; i++) {
       char start = str.charAt(i);
       char end = str.charAt(str.length() - 1 - i);
