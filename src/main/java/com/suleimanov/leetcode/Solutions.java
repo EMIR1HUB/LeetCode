@@ -7,6 +7,35 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day28 Maximum Depth of Binary Tree https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+  public int maxDepth(TreeNode root) {
+    if (root == null) return 0;
+    // Hypothesis
+    int left = maxDepth(root.left);
+    int right = maxDepth(root.right);
+    // Induction
+    return Math.max(left, right) + 1;
+  }
+
+  public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+      this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+      this.val = val;
+      this.left = left;
+      this.right = right;
+    }
+  }
+
   //day27 Valid Palindrome https://leetcode.com/problems/valid-palindrome/description/
   public boolean isPalindrome(String s) {
     String inputStr = s.toLowerCase().replaceAll("[^a-z0-9]", "");

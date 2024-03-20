@@ -36,6 +36,16 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
     arrayList.add("F");
 
+    Account account = new Account();
+    Thread one = new Thread(account);
+    Thread two = new Thread(account);
+    one.setName("Fred");
+    two.setName("Lucy");
+    one.start();
+    two.start();
+
+
+
 //    System.out.println(solutions.isPalindrome("A man, a plan, a canal: Panama"));
 
 //    System.out.println(solutions.deleteDuplicates(
