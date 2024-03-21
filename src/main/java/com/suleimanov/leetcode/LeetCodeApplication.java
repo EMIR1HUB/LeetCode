@@ -44,7 +44,7 @@ public class LeetCodeApplication implements CommandLineRunner {
     one.start();
     two.start();
 
-
+//    System.out.println(solutions.singleNumber(new int[]{2,2,1}));
 
 //    System.out.println(solutions.isPalindrome("A man, a plan, a canal: Panama"));
 

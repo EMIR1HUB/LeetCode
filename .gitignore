@@ -34,3 +34,6 @@ build/
 /mvnw
 /mvnw.cmd
 /.mvn/
+/src/main/java/com/suleimanov/leetcode/JoinRunnable.java
+/src/main/java/com/suleimanov/leetcode/AccountDanger.java
+/src/main/java/com/suleimanov/leetcode/Account.java

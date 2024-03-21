@@ -7,6 +7,20 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day29 Single Number https://leetcode.com/problems/single-number/description/
+  public int singleNumber(int[] nums) {
+    if (nums.length == 1) {
+      return nums[0];
+    }
+    Arrays.sort(nums);
+    for (int i = 0; i < nums.length - 1; i += 2) {
+      if (nums[i] != nums[i + 1]) {
+        return nums[i];
+      }
+    }
+    return nums[nums.length - 1];
+  }
+
   //day28 Maximum Depth of Binary Tree https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
   public int maxDepth(TreeNode root) {
     if (root == null) return 0;
