@@ -7,6 +7,26 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day30 Summary Ranges https://leetcode.com/problems/summary-ranges/description/
+  public List<String> summaryRanges(int[] nums) {
+    List<String> ranges = new ArrayList<>();
+
+    for (int i = 0; i < nums.length; i++) {
+      StringBuilder builder = new StringBuilder();
+      builder.append(nums[i]);
+      Integer lastNumber = null;
+      while(nums.length > (i + 1) && nums[i + 1] - nums[i] == 1) {
+        lastNumber = nums[i + 1];
+        i++;
+      }
+      if (lastNumber != null) {
+        builder.append("->").append(lastNumber);
+      }
+      ranges.add(builder.toString());
+    }
+    return ranges;
+  }
+
   //day29 Single Number https://leetcode.com/problems/single-number/description/
   public int singleNumber(int[] nums) {
     if (nums.length == 1) {
