@@ -7,6 +7,25 @@ import java.util.*;
 @Component
 public class Solutions {
 
+  //day31 Max Consecutive Ones https://leetcode.com/problems/max-consecutive-ones/description/
+  public int findMaxConsecutiveOnes(int[] nums) {
+    int maxCount = 0;
+    int count = 0;
+
+    for (int elem : nums) {
+      if(elem == 0){
+        if (maxCount < count){
+          maxCount = count;
+        }
+        count = 0;
+      }
+      else {
+        count++;
+      }
+    }
+    return maxCount > count ? maxCount : count;
+  }
+
   //day30 Summary Ranges https://leetcode.com/problems/summary-ranges/description/
   public List<String> summaryRanges(int[] nums) {
     List<String> ranges = new ArrayList<>();
@@ -15,7 +34,7 @@ public class Solutions {
       StringBuilder builder = new StringBuilder();
       builder.append(nums[i]);
       Integer lastNumber = null;
-      while(nums.length > (i + 1) && nums[i + 1] - nums[i] == 1) {
+      while (nums.length > (i + 1) && nums[i + 1] - nums[i] == 1) {
         lastNumber = nums[i + 1];
         i++;
       }

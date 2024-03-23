@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class LeetCodeApplication implements CommandLineRunner {
@@ -36,13 +38,15 @@ public class LeetCodeApplication implements CommandLineRunner {
     arrayList.add("F");
     arrayList.add("F");
 
-    Account account = new Account();
-    Thread one = new Thread(account);
-    Thread two = new Thread(account);
-    one.setName("Fred");
-    two.setName("Lucy");
-    one.start();
-    two.start();
+//    Account account = new Account();
+//    Thread one = new Thread(account);
+//    Thread two = new Thread(account);
+//    one.setName("Fred");
+//    two.setName("Lucy");
+//    one.start();
+//    two.start();
+
+//    System.out.println(solutions.findMaxConsecutiveOnes(new int[]{1,0,1,1,0,1}));
 
 //    System.out.println(solutions.singleNumber(new int[]{2,2,1}));
 
